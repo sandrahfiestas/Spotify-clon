@@ -1,0 +1,39 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $tertiary-black;
+  padding: 0.5em 0 ;
+  height: 5.5rem;
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+    color: $text-color;
+  }
+
+  &__item {
+    text-align: center;  
+
+    &-icon {
+      display: block;
+      margin: auto;
+      height: 26px;
+      width: 26px;
+    }
+
+    & path {
+      fill: $text-color;
+    }
+
+    &:hover :is(path, span) {
+      fill: $white;
+      color: $white;
+    }
+
+    &-text {
+      font-size: 1.2rem;      
+    }
+  }
+}
