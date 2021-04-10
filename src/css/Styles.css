@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #030303;
+  color: white;
+  font-family: Spotify;
+  font-size: 1.5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__left-title {
+  font-size: 2.8rem;
+}
+.header__right {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.header__right-icon {
+  width: 28px;
+  height: 28px;
+}
+.header__right-icon path {
+  fill: #ffffff;
+}
+.header__right-icon:hover path {
+  fill: #7D7D7D;
+}
+
+.container-home {
+  background: linear-gradient(160deg, #42435e 0%, #282d50 6%, black 23%);
+}
+
+.container-cardsHistory {
+  padding: 0px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 8px;
+  row-gap: 8px;
+}
+.container-cardsHistory__card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-radius: 5px;
+  background: rgba(128, 128, 128, 0.3);
+}
+.container-cardsHistory__card-img {
+  height: 65px;
+  width: 62px;
+}
+.container-cardsHistory__card-p {
+  padding-left: 9px;
+}
+.container-cardsHistory__card:hover {
+  background-color: rgba(192, 192, 192, 0.3);
+}
+
+.container-cardsPlaylist {
+  margin-top: 40px;
+  padding-left: 10px;
+}
+.container-cardsPlaylist__cards {
+  width: 100%;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+.container-cardsPlaylist__card {
+  margin-left: 18px;
+  width: 108px;
+}
+.container-cardsPlaylist__card-img {
+  height: 105px;
+}
+.container-cardsPlaylist__card:first-child {
+  margin: 0px;
+}
+.container-cardsPlaylist__card:hover {
+  background-color: rgba(3, 3, 3, 0.2);
+  filter: brightness(0.7);
+  transform: scale(0.98);
+}
+.container-cardsPlaylist__card p {
+  font-size: 1.3rem;
+  padding-top: 0.5rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #242424;
+  padding: 0.5em 0;
+  height: 5.5rem;
+}
+.footer__list {
+  display: grid;
+  grid-auto-flow: column;
+  color: #7D7D7D;
+}
+.footer__item {
+  text-align: center;
+}
+.footer__item-icon {
+  display: block;
+  margin: auto;
+  height: 26px;
+  width: 26px;
+}
+.footer__item path {
+  fill: #7D7D7D;
+}
+.footer__item:hover :is(path, span) {
+  fill: #ffffff;
+  color: #ffffff;
+}
+.footer__item-text {
+  font-size: 1.2rem;
+}
+
+@font-face {
+  font-family: "Spotify";
+  src: url("../fonts/AvenirLTStd-Roman.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=Styles.css.map */
