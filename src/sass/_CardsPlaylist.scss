@@ -1,0 +1,39 @@
+.container-cardsPlaylist {
+  margin-top: 40px;
+  padding-left: 10px;
+
+  &__cards {
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    // overflow-x:scroll;
+    // scroll-snap-type: x mandatory;
+  }
+
+  &__card {
+    margin-left: 18px;
+    // scroll-snap-align: center;
+    width: 108px;
+
+    &-img {
+      height: 105px;
+    }
+
+    &:first-child {
+      margin: 0px;
+    }
+
+    &:hover {
+      background-color: rgba(3,3,3, .2);
+      filter:brightness(0.7);
+      transform:scale(0.98);
+    }
+
+    & p {
+      font-size: 1.3rem;
+      padding-top: 0.5rem;
+    }
+  }
+}
