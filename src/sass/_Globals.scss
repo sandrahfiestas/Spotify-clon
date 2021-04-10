@@ -1,0 +1,31 @@
+// == PALETA == //
+$primary-black : #030303;
+$secondary-black : #171717;
+$tertiary-black: #242424;
+$bg-hover: #282828;
+$text-color: #7D7D7D;
+$white : #ffffff;
+$black : #000000;
+
+
+// == GLOBALES == //
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-black;
+  color: white;
+  font-family: Spotify;
+  font-size: 1.5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
