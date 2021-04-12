@@ -11,12 +11,16 @@ import YourLibrary from './pages/YourLibrary';
 import Premium from './pages/Premium';
 import SongHistory from './pages/SongHistory';
 import Configuration from './pages/Configuration';
+import Login from './pages/Login';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/Home">
           <Home />
         </Route>
         <Route path="/Search">
