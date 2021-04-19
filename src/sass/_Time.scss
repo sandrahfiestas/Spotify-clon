@@ -1,3 +1,11 @@
   .time-current {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
+    font-weight: bold;
+  }
+
+  @media (min-width: 760px) {
+  .time-current {
+      font-size: 3.2rem;
+      font-weight: bold;
+    }
   }
