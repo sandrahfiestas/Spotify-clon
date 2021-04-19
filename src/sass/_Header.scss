@@ -2,12 +2,9 @@
   padding: 20px 10px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-
-  &__left-title {
-    font-size: 2.8rem;
-  }
+  justify-content: space-between;
+  background: $secondary-black;
 
   &__right {
     width: 80px;
@@ -24,6 +21,79 @@
       
       &:hover path{
         fill: $text-color;
+      }
+    }
+  }
+
+  &__queries--disabled {
+    display: none;
+  }
+
+}
+
+@media (min-width: 760px) {
+  .header {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    top: 0;
+    position:sticky;
+    padding: 15px 30px;
+    
+    &__left, &__right {
+      display: none;
+    }
+
+    &__queries {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      &-btns {
+        width: 85px;
+        display: flex;
+        justify-content: space-between;
+
+        &-Previous, &-Next {
+          background-color: $black;
+          height: 32px;
+          width: 32px;
+          padding: 8px;
+          border-radius: 20px;
+  
+          & path {
+            fill: $text-color;
+          }
+          
+          &:hover path{
+            fill: $white;
+          }
+        }
+      }
+
+      &-user {
+        background-color: $black;
+        height: 32px;
+        display: flex;
+        padding: 3px 4px;
+        border-radius: 20px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: rgba(192,192,192, .3);
+        }
+
+        &-photo {
+          height: 28px;
+          width: 28px;
+          object-fit: cover;
+          border-radius: 20px;
+          background-size: cover;
+        }
+
+        &-name {
+          margin: auto;
+          padding: 0 15px;
+        }
       }
     }
   }
