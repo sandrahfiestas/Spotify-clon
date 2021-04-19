@@ -9,11 +9,6 @@ import SpotifyWebApi from 'spotify-web-api-js';
 import { getTokenFromUrl } from './spotify';
 import { useDataLayerValue } from './DataLayer';
 import Home from './pages/Home';
-// import Search from './pages/Search';
-// import YourLibrary from './components/YourLibrary';
-// import Premium from './pages/Premium';
-// import SongHistory from './pages/SongHistory';
-// import Configuration from './pages/Configuration';
 import Login from './pages/Login';
 
 const spotify = new SpotifyWebApi();
@@ -49,6 +44,27 @@ function App() {
           playlists,
         });
       });
+
+      spotify.getPlaylist('37i9dQZEVXcJZyENOWUFo7').then((response) => {
+        dispatch({
+          type: 'SET_DISCOVER_WEEKLY',
+          discover_weekly: response,
+        });
+      });
+
+      spotify.getMyTopArtists().then((response) => {
+        dispatch({
+          type: 'SET_TOP_ARTISTS',
+          topArtists: response,
+        });
+      });
+
+      spotify.getMyRecentlyPlayedTracks().then((response) => {
+        dispatch({
+          type: 'SET_RECENTLY_PLAYED_TRACKS',
+          recentlyPlayedTracks: response,
+        });
+      });
     }
   }, []);
 
@@ -68,22 +84,6 @@ function App() {
         <Route path="/Home">
           <Home />
         </Route>
-
-        {/* <Route path="/Search">
-          <Search />
-        </Route>
-        <Route path="/YourLibrary">
-          <YourLibrary />
-        </Route>
-        <Route path="/Premium">
-          <Premium />
-        </Route>
-        <Route path="/SongHistory">
-          <SongHistory />
-        </Route>
-        <Route path="/Configuration">
-          <Configuration />
-        </Route> */}
       </Switch>
     </Router>
   );
