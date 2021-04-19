@@ -4,6 +4,8 @@ export const initialState = {
   playlists: [],
   playing: false,
   item: null,
+  topArtists: null,
+  recentlyPlayedTracks: null,
   // token: null,
   // token:
   //   // eslint-disable-next-line max-len
@@ -32,6 +34,24 @@ const reducer = (state, action) => {
       return {
         ...state,
         playlists: action.playlists,
+      };
+
+    case 'SET_DISCOVER_WEEKLY':
+      return {
+        ...state,
+        discover_weekly: action.discover_weekly,
+      };
+
+    case 'SET_TOP_ARTISTS':
+      return {
+        ...state,
+        topArtists: action.topArtists,
+      };
+
+    case 'SET_RECENTLY_PLAYED_TRACKS':
+      return {
+        ...state,
+        recentlyPlayedTracks: action.recentlyPlayedTracks,
       };
 
     default:
