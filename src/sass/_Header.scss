@@ -4,8 +4,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: $secondary-black;
-
+  
   &__right {
     width: 80px;
     display: flex;
@@ -14,6 +13,10 @@
     &-icon {
       width: 28px;
       height: 28px;
+      
+      &:hover {
+        cursor: pointer;
+      }
 
       & path {
         fill: $white;
@@ -28,7 +31,6 @@
   &__queries--disabled {
     display: none;
   }
-
 }
 
 @media (min-width: 760px) {
@@ -38,6 +40,7 @@
     top: 0;
     position:sticky;
     padding: 15px 30px;
+    background-color: $secondary-black;
     
     &__left, &__right {
       display: none;
@@ -59,6 +62,10 @@
           width: 32px;
           padding: 8px;
           border-radius: 20px;
+
+          &:hover {
+            cursor: pointer;
+          }
   
           & path {
             fill: $text-color;
@@ -80,6 +87,7 @@
 
         &:hover {
           background-color: rgba(192,192,192, .3);
+          cursor: pointer;
         }
 
         &-photo {
