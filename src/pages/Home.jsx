@@ -1,16 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
-import CardsHistory from '../components/CardsHistory';
-import CardsPlaylist from '../components/CardsPlaylist';
+import Sidebar from '../components/Sidebar';
+import Main from '../components/Main';
 import Footer from '../components/Footer';
 
 function Home() {
   return (
-    <div className="container-home">
+    <div className="wrapper">
       <Header />
-      <CardsHistory />
-      <CardsPlaylist />
-      <CardsPlaylist />
+      <Sidebar />
+      <Main />
       <Footer />
     </div>
   );
