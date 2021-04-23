@@ -1,5 +1,6 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../images/icons/logo.svg';
+import { loginUrl } from '../spotify';
 
 function Login() {
   return (
@@ -10,7 +11,9 @@ function Login() {
         <br />
         Gratis en Spotify.
       </p>
-      <a className="login__button" href="/#">Login with Spotify</a>
+      <a href={loginUrl} className="login__button">
+        Login with Spotify
+      </a>
     </div>
   );
 }
