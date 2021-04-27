@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Time from './Time';
 import { ReactComponent as HistoryIcon } from '../images/icons/history.svg';
 import { ReactComponent as SettingsIcon } from '../images/icons/settings.svg';
@@ -9,6 +10,7 @@ import { useDataLayerValue } from '../DataLayer';
 
 function Header() {
   const [{ user }, dispatch] = useDataLayerValue();
+  const history = useHistory();
 
   return (
     <header className="header">
@@ -22,8 +24,8 @@ function Header() {
 
       <div className="header__queries header__queries--disabled">
         <div className="header__queries-btns">
-          <PreviousBtnIcon className="header__queries-btns-Previous" />
-          <NextBtnIcon className="header__queries-btns-Next" />
+          <PreviousBtnIcon className="header__queries-btns-Previous" onClick={history.goBack} />
+          <NextBtnIcon className="header__queries-btns-Next" onClick={history.goForward} />
         </div>
         <div className="header__queries-user">
           <img
