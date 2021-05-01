@@ -17,16 +17,19 @@ function AllCards() {
 
         <div className="container-allCards__allcards">
           {topArtists?.items?.map((topArtist) => (
-            <div className="container-cardsPlaylist__card" key={topArtist.id}>
+            <div className="container-allCards__card" key={topArtist.id}>
               <img
                 src={topArtist.images[0].url}
-                className="container-cardsPlaylist__card-img"
+                className="container-allCards__card-img"
                 alt={topArtist.name}
               />
-              <PlayIcon className="container-cardsPlaylist__card-icon container-cardsPlaylist__card-icon--disabled" />
-              <p className="container-cardsPlaylist__card-p">
-                {topArtist.name}
-              </p>
+              <PlayIcon className="container-allCards__card-icon container-allCards__card-icon--disabled" />
+              <div className="container-allCards__card-detail">
+                <p className="container-allCards__card-detail-name">{topArtist.name}</p>
+                <p className="container-allCards__card-detail-p">
+                  {topArtist.genres.join(', ')}
+                </p>
+              </div>
             </div>
           ))}
         </div>

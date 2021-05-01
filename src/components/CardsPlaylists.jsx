@@ -33,7 +33,12 @@ function CardsPlaylist() {
               alt={topArtist.name}
             />
             <PlayIcon className="container-cardsPlaylist__card-icon container-cardsPlaylist__card-icon--disabled" />
-            <p className="container-cardsPlaylist__card-p">{topArtist.name}</p>
+            <p className="container-cardsPlaylist__card-name">
+              {topArtist.name}
+            </p>
+            <p className="container-cardsPlaylist__card-p">
+              {topArtist.genres.join(', ')}
+            </p>
           </div>
         ))}
       </div>

@@ -22,7 +22,6 @@ function CardsPlaylist() {
         <p>Escuchado recientemente</p>
       </div>
       <div className="container-cardsPlaylist__cards">
-
         {recentlyPlayedTracks?.items?.map((recentlyPlayedTrack) => (
           <div
             className="container-cardsPlaylist__card"
@@ -34,8 +33,11 @@ function CardsPlaylist() {
               alt={recentlyPlayedTrack.track.name}
             />
             <PlayIcon className="container-cardsPlaylist__card-icon container-cardsPlaylist__card-icon--disabled" />
-            <p className="container-cardsPlaylist__card-p">
+            <p className="container-cardsPlaylist__card-name">
               {recentlyPlayedTrack.track.name}
+            </p>
+            <p className="container-cardsPlaylist__card-p">
+              {recentlyPlayedTrack.track.album.name}
             </p>
           </div>
         ))}
