@@ -1,9 +1,11 @@
 // == PALETA == //
+$primary-color: #00B050;
 $primary-black : #030303;
 $secondary-black : #171717;
 $tertiary-black: #242424;
 $bg-hover: #282828;
 $text-color: #7D7D7D;
+$text-description: #a3a3a3;
 $white : #ffffff;
 $black : #000000;
 
@@ -17,7 +19,7 @@ $black : #000000;
 
 body {
   background-color: $primary-black;
-  color: white;
+  color: $white;
   font-family: Spotify;
   font-size: 1.5rem;
 }
@@ -28,4 +30,84 @@ html {
 
 ul {
   list-style: none;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+// == MIXIN Card-Mobile== //
+@mixin base_miniCard {
+  border-radius: 5px;
+
+  &:hover {
+    background-color: rgba(3,3,3, .2);
+    filter:brightness(0.7);
+    transform:scale(0.98);
+  }
+}
+
+@mixin base_miniCard_img {
+  width: 108px;
+  height: 105px;
+  border-radius: 5px;
+}
+
+@mixin base_miniCard_name {
+  padding-top: 15px;
+  font-size: 1.5rem;
+  display:-webkit-box;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+}
+
+@mixin base_miniCard_p {
+  font-size: 1.3rem;
+  color: $text-color;
+  display:-webkit-box;
+  overflow : hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical; 
+}
+
+
+// == MIXIN Card-Desktop== //
+@mixin base_card {
+  height: 260px;
+  width: 188px;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgba(128,128,128, .2);
+  transition: all 0.4s ease;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(192,192,192, .2);
+    filter:brightness(1);
+    transform:scale(1);
+  }
+
+}
+
+@mixin base_card_img {
+  width: 100%;
+  height: 165px;
+  box-shadow: 0px 10px 10px -6px black;
+}
+
+@mixin base_card_icon {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: 20px;
+  bottom: 80px;
+  
+  &:hover {
+    transform:scale(1.05)
+  }
 }
