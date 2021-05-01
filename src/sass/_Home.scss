@@ -1,11 +1,24 @@
 .wrapper {
+  display: grid;
+  grid-template-columns: 224px 1fr;
+  grid-template-rows: 62px 1fr 86px;
   background: linear-gradient(160deg, rgba(66,67,94,1), rgba(0,0,0,1) 50%);
 }
+
 
 @media (min-width: 760px) {
   .wrapper {
     background: $primary-black;
-    display: grid;
-    grid-template-columns: 224px 1fr;
   }
 }
+
+
+// @media (min-width: 760px) {
+//   .wrapper {
+//     display: grid;
+//     grid-template-columns: 224px 1fr;
+//     // grid-template-rows: 62px 1fr 96px;
+//     grid-template-rows: 62px 1fr 86px;
+//     background: $primary-black;
+//   }
+// }
