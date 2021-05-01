@@ -1,0 +1,16 @@
+.container-libraryList {
+  height: 225px;
+  margin-top: 25px;
+  line-height: 30px;
+  color: $text-color;
+  padding: 12px 0px 0px 14px;
+  border-top: 1px solid $text-color;
+  overflow-y: auto;
+
+  &__text {
+    &:hover {
+      color: $white;
+      cursor: default;
+    }
+  }
+}
