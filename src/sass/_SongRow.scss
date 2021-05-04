@@ -1,0 +1,25 @@
+
+.songRow {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+
+  &__album {
+    width: 60px;
+  }
+
+  &__description {
+    margin-left: 15px;
+
+    &-title {
+      @include base_miniCard_info(1.6rem, 1);
+    }
+
+    &-p {
+      color: $text-color;
+      margin-top: 3px;
+      @include base_miniCard_info(1.3rem, 1);
+    }
+  }
+
+}
