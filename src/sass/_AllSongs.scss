@@ -1,0 +1,106 @@
+.container-allSongs {
+  grid-column: 1/3;
+  padding: 20px 10px;
+  background: $black;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+
+    &-img {
+      height: 120px;
+      width: 120px;
+    }
+
+    &-info {
+      padding: 10px 15px 0;
+    }
+
+    &-p {
+      font-size: 1.2rem;
+    }
+
+    &-description {
+      margin-top: 5px;
+      color: $text-color;
+    }
+  }
+
+  &__songs {
+    &-icons {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 760px) {
+  .container-allSongs {
+    // border: 1px solid red;
+    grid-column: 2/3;
+    padding: 20px 30px 50px;
+    overflow-y: auto;
+
+    &__title {
+      // border: 1px solid yellowgreen;
+      display: flex;
+      flex-direction: row;
+
+      &-img {
+        height: 232px;
+        width: 232px;
+      }
+
+      &-info {
+        // border: 1px solid red;
+        padding-left: 25px;
+        text-align: left;
+        align-self: flex-end;
+      }
+
+      &-h2 {
+        margin: 5px 0 10px;
+        font-size: 6rem;
+      }
+
+      &-subDescription {
+        margin-top: 10px;
+      }
+
+      &-totalSongs {
+        color: $text-color;
+      }
+    }
+
+    &__songs {
+      
+      &-icons {
+        // border: 1px solid green;
+        display: block;
+        display: flex;
+        align-items: center;
+        color: $text-color;
+        font-size: 3rem;
+      }
+
+      &-playIcon {
+        &:hover {
+          transform:scale(1.1);
+        }
+      }
+
+      &-heartIcon{
+        // border: 1px solid red;
+        height: 35px;
+        width: 35px;
+        margin: 35px;
+
+        & path {
+          stroke: $text-color;
+        }
+      }
+    }
+  }
+}

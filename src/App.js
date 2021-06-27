@@ -4,12 +4,17 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from 'react-router-dom';
 import SpotifyWebApi from 'spotify-web-api-js';
 import { getTokenFromUrl } from './spotify';
 import { useDataLayerValue } from './DataLayer';
-import Home from './pages/Home';
 import Login from './pages/Login';
+import Home from './pages/Home';
+import AllCards from './pages/AllCards';
+import Search from './pages/Search';
+import LibraryRouter from './routers/LibraryRouter';
+import AllSongs from './pages/AllSongs';
 
 const spotify = new SpotifyWebApi();
 
@@ -52,6 +57,13 @@ function App() {
         });
       });
 
+      spotify.getPlaylist('37i9dQZEVXcJS1p21VGSBi').then((response) => {
+        dispatch({
+          type: 'SET_WEEKLY',
+          weekly: response,
+        });
+      });
+
       spotify.getMyTopArtists().then((response) => {
         dispatch({
           type: 'SET_TOP_ARTISTS',
@@ -65,6 +77,27 @@ function App() {
           recentlyPlayedTracks: response,
         });
       });
+
+      spotify.getMyTopTracks().then((response) => {
+        dispatch({
+          type: 'SET_TOP_TRACKS',
+          topTracks: response,
+        });
+      });
+
+      // spotify.getCategories().then((response) => {
+      //   dispatch({
+      //     type: 'SET_CATEGORIES',
+      //     categories: response,
+      //   });
+      // });
+
+      // spotify.().then((response) => {
+      //   dispatch({
+      //     type: 'SET_SAVED_ALBUMS',
+      //     savedAlbums: response,
+      //   });
+      // });
     }
   }, []);
 
@@ -75,14 +108,18 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          {
-          token
-            ? <Home spotify={spotify} />
-            : <Login />
-          }
+          {token ? <Home spotify={spotify} /> : <Login />}
         </Route>
-        <Route path="/Home">
-          <Home />
+        <Route exact path="/home" component={Home} />
+        <Route exact path="/allCards" component={AllCards} />
+        <Route exact path="/allsongs" component={AllSongs} />
+        <Route exact path="/search" component={Search} />
+        <Route path="/library" component={LibraryRouter} />
+        <Route path="/404">
+          <h1>404 Not found</h1>
+        </Route>
+        <Route path="*">
+          <Redirect to="/404" />
         </Route>
       </Switch>
     </Router>

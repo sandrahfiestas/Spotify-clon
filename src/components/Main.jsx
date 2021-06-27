@@ -1,12 +1,16 @@
 import React from 'react';
-import CardsHistory from './CardsHistory';
-import CardsPlaylist from './CardsPlaylist';
+import CardsPlaylistHeader from './CardsPlaylistHeader';
+import CardsPlaylistRecently from './CardsPlaylistRecently';
+import CardsPlaylists from './CardsPlaylists';
+// import Player from './Player';
 
 function Main() {
   return (
     <div className="main">
-      <CardsHistory />
-      <CardsPlaylist />
+      <CardsPlaylistHeader />
+      <CardsPlaylistRecently />
+      <CardsPlaylists />
+      {/* <Player /> */}
     </div>
   );
 }

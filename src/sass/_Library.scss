@@ -1,0 +1,14 @@
+.container-library {
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    
+    &-item {
+      border: 1px solid yellowgreen;
+      padding: 12px;
+      border-radius: 5px;
+      
+    }
+  }
+}

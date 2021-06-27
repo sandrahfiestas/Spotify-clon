@@ -6,6 +6,9 @@ export const initialState = {
   item: null,
   topArtists: null,
   recentlyPlayedTracks: null,
+  topTracks: null,
+  categories: null,
+  savedAlbums: null,
   // token: null,
   // token:
   //   // eslint-disable-next-line max-len
@@ -42,6 +45,12 @@ const reducer = (state, action) => {
         discover_weekly: action.discover_weekly,
       };
 
+    case 'SET_WEEKLY':
+      return {
+        ...state,
+        weekly: action.weekly,
+      };
+
     case 'SET_TOP_ARTISTS':
       return {
         ...state,
@@ -53,6 +62,24 @@ const reducer = (state, action) => {
         ...state,
         recentlyPlayedTracks: action.recentlyPlayedTracks,
       };
+
+    case 'SET_TOP_TRACKS':
+      return {
+        ...state,
+        topTracks: action.topTracks,
+      };
+
+      // case 'SET_CATEGORIES':
+      //   return {
+      //     ...state,
+      //     categories: action.categories,
+      //   };
+
+      // case 'SET_SAVED_ALBUMS':
+      //   return {
+      //     ...state,
+      //     savedAlbums: action.savedAlbums,
+      //   };
 
     default:
       return state;

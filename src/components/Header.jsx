@@ -6,6 +6,7 @@ import { ReactComponent as HistoryIcon } from '../images/icons/history.svg';
 import { ReactComponent as SettingsIcon } from '../images/icons/settings.svg';
 import { ReactComponent as PreviousBtnIcon } from '../images/icons/btn-left.svg';
 import { ReactComponent as NextBtnIcon } from '../images/icons/btn-right.svg';
+import profile from '../images/profile.png';
 import { useDataLayerValue } from '../DataLayer';
 
 function Header() {
@@ -24,12 +25,23 @@ function Header() {
 
       <div className="header__queries header__queries--disabled">
         <div className="header__queries-btns">
-          <PreviousBtnIcon className="header__queries-btns-Previous" onClick={history.goBack} />
-          <NextBtnIcon className="header__queries-btns-Next" onClick={history.goForward} />
+          <PreviousBtnIcon
+            className="header__queries-btns-previous"
+            onClick={history.goBack}
+          />
+          <NextBtnIcon
+            className="header__queries-btns-next"
+            onClick={history.goForward}
+          />
         </div>
         <div className="header__queries-user">
           <img
             src={user?.images[0]?.url}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = { profile };
+            }}
+            // src={profile}
             alt="Profile"
             className="header__queries-user-photo"
           />

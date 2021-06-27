@@ -1,5 +1,5 @@
 .container-cardsHistory {
-  padding: 0px 10px;
+  padding-right: 10px;
 
   &__time--disabled {
     display: none;
@@ -60,7 +60,7 @@
 
 @media (min-width: 760px) {
   .container-cardsHistory {
-    padding: 15px 30px;
+    padding-top: 15px;
 
     &__time--disabled {
       display: block;
