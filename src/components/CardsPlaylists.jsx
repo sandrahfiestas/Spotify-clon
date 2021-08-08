@@ -6,7 +6,7 @@ import { ReactComponent as PlayIcon } from '../images/icons/play.svg';
 
 function CardsPlaylist() {
   const [{ weekly }, dispatch] = useDataLayerValue();
-  console.log('semanal', weekly);
+  // console.log('semanal', weekly);
 
   // Top artists
   // const [{ topArtists }, dispatch] = useDataLayerValue();

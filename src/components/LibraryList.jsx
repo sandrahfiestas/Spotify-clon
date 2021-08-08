@@ -4,7 +4,7 @@ import { useDataLayerValue } from '../DataLayer';
 
 function LibraryList() {
   const [{ playlists }, dispatch] = useDataLayerValue();
-  console.log('playlist✨', playlists);
+  // console.log('playlist✨', playlists);
 
   return (
     <div className="container-libraryList">

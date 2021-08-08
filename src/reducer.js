@@ -16,7 +16,7 @@ export const initialState = {
 };
 
 const reducer = (state, action) => {
-  console.log('reducer_action👉', action);
+  // console.log('reducer_action👉', action);
 
   // Action -> type, [payload]
 

@@ -2,7 +2,7 @@
 import React from 'react';
 
 function SongRow({ track }) {
-  console.log('Track 👀', track);
+  // console.log('Track 👀', track);
   return (
     <div className="songRow">
       <img className="songRow__album" src={track.album.images[0].url} alt="" />

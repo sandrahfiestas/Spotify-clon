@@ -5,7 +5,7 @@ import { ReactComponent as PlayIcon } from '../images/icons/play.svg';
 
 function CardsPlaylist() {
   const [{ recentlyPlayedTracks }, dispatch] = useDataLayerValue();
-  console.log('Recientemente 😃', recentlyPlayedTracks);
+  // console.log('Recientemente 😃', recentlyPlayedTracks);
 
   // const [{ topArtists }, dispatch] = useDataLayerValue();
   // console.log('Artistas Top 🤯👉 ', topArtists);
