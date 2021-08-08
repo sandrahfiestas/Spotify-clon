@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import './css/Styles.css';
 import {
@@ -19,7 +20,7 @@ import AllSongs from './pages/AllSongs';
 const spotify = new SpotifyWebApi();
 
 function App() {
-  const [{ user, token }, dispatch] = useDataLayerValue();
+  const [{ token }, dispatch] = useDataLayerValue();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -101,8 +102,8 @@ function App() {
     }
   }, []);
 
-  console.log('usuario 🧡', user);
-  console.log('token 😱', token);
+  // console.log('usuario 🧡', user);
+  // console.log('token 😱', token);
 
   return (
     <Router>
