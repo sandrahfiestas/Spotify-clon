@@ -1,14 +1,42 @@
-.container-library {
+.library {
+  grid-column: 1/3;
+  height: 70vh;
 
-  &__menu {
+  &__divImg {
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    
-    &-item {
-      border: 1px solid yellowgreen;
-      padding: 12px;
-      border-radius: 5px;
-      
+
+
+    &-icon {
+      height: 80px;
+      width: 80px;
+
+      & path {
+        fill: $bg-hover;
+      }
     }
   }
 }
+
+@media (min-width: 760px) {
+  .library {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+
+// .container-library {
+//   &__menu {
+//     display: flex;
+//     justify-content: center;
+    
+//     &-item {
+//       border: 1px solid yellowgreen;
+//       padding: 12px;
+//       border-radius: 5px;
+      
+//     }
+//   }
+// }

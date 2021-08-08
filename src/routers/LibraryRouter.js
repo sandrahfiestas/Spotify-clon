@@ -1,9 +1,10 @@
 import React from 'react';
-import { NavLink, Route, Switch } from 'react-router-dom';
+// import { NavLink, Route, Switch } from 'react-router-dom';
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
-import LibraryContent from '../components/LibraryContent';
+// import LibraryContent from '../components/LibraryContent';
+import { ReactComponent as LibraryIcon } from '../images/icons/library.svg';
 
 function LibraryRouter() {
   return (
@@ -11,7 +12,12 @@ function LibraryRouter() {
       <div className="wrapper">
         <Header />
         <Sidebar />
-        <div className="container-library">
+        <div className="library">
+          <div className="library__divImg">
+            <LibraryIcon className="library__divImg-icon" />
+          </div>
+        </div>
+        {/* <div className="container-library">
           <div className="container-library__menu">
             <NavLink
               to="/library/playlists"
@@ -42,14 +48,14 @@ function LibraryRouter() {
               Álbunes
             </NavLink>
           </div>
-          {/* <h1>Biblioteca</h1> */}
-        </div>
+          <h1>Biblioteca</h1>
+        </div> */}
         <Footer />
       </div>
 
-      <Switch>
+      {/* <Switch>
         <Route exact path="/library/playlists" component={LibraryContent} />
-      </Switch>
+      </Switch> */}
     </>
   );
 }
