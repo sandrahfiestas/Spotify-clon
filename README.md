@@ -9,15 +9,18 @@ Maquetación de la Plataforma líder a nivel global en consumo de música bajo d
 
 ## Desktop
 
-Aplicación de escritorio (vista)
+Aplicación de escritorio.
 
-![Desktop](https://raw.githubusercontent.com/sandrahfiestas/Portfolio/master/src/images/desktop_readme.jpg)
+![Desktop](https://raw.githubusercontent.com/sandrahfiestas/Spotify-clon/master/src/images/desktop_readme.jpg)
 
 
 ## Mobile
 
-Aplicación para celulares (vista)
+Aplicación para celulares.
 
-![Mobile1](https://raw.githubusercontent.com/sandrahfiestas/Portfolio/master/src/images/mobile1_readme.jpg)
-![Mobile2](https://raw.githubusercontent.com/sandrahfiestas/Portfolio/master/src/images/mobile2_readme.jpg)
-![Mobile3](https://raw.githubusercontent.com/sandrahfiestas/Portfolio/master/src/images/mobile3_readme.jpg)
+![Mobile1](https://raw.githubusercontent.com/sandrahfiestas/Spotify-clon/master/src/images/mobile1_readme.jpg)
+![Mobile2](https://raw.githubusercontent.com/sandrahfiestas/Spotify-clon/master/src/images/mobile2_readme.jpg)
+![Mobile3](https://raw.githubusercontent.com/sandrahfiestas/Spotify-clon/master/src/images/mobile3_readme.jpg)
+
+
+***
